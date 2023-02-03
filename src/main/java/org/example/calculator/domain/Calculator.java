@@ -2,15 +2,14 @@ package org.example.calculator.domain;
 
 
 
-import org.example.calculator.tobe.AdditionOperator;
+import org.example.calculator.tobe.*;
 import org.example.calculator.tobe.ArithmeticOperator;
-import org.example.calculator.tobe.DivisionOperator;
 
 import java.util.Arrays;
 import java.util.List;
 
 public class Calculator {
-    private static final List<ArithmeticOperator> arithmeticOperators = Arrays.asList(new AdditionOperator(), new DivisionOperator());
+    private static final List<ArithmeticOperator> arithmeticOperators = Arrays.asList(new AdditionOperator(), new SubtractionOperator(), new DivisionOperator(), new MultiplicationOperator());
 
     public static int calculate(PositiveNumber num1, String operator, PositiveNumber num2) {
         return arithmeticOperators.stream()
